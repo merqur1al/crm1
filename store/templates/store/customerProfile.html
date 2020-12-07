@@ -1,0 +1,51 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+
+<div class="page-content page-container" id="page-content">
+    <div class="padding">
+        <div class="row container d-flex justify-content-center">
+            <div class="col-xl-6 col-md-12">
+                <div class="card user-card-full">
+                    <div class="row m-l-0 m-r-0">
+                        <div class="col-sm-4 bg-c-lite-green user-profile">
+                            <div class="card-block text-center text-white">
+                                {% if customer.profile_pic %}
+                                    <div class="m-b-25"><img src="{{customer.profile_pic.url}}" class="img-radius" alt="User-Profile-Image"></div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="card-block">
+                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Information</h6>
+                                    <form action="" enctype="multipart/form-data" method="POST">
+                                        {% csrf_token %}
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <p class="m-b-10 f-w-600">Email:</p>
+                                                <p class="m-b-10 f-w-600">{{form.email}}</p>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <p class="m-b-10 f-w-600">Phone:</p>
+                                                <p class="m-b-10 f-w-600">{{form.phone}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <p class="m-b-10 f-w-600">Name:</p>
+                                                <p class="m-b-10 f-w-600">{{form.name}}</p>
+                                            </div>
+                                        </div>
+                                        <p>{{form.profile_pic}}</p>
+                                        <input type="submit" name="submit">
+                                    </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

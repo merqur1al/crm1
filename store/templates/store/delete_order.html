@@ -1,0 +1,14 @@
+{%  extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+
+<h3>Are you sure you want to delete {{order.product.name}}?</h3>
+<form action="{% url 'store:delete_order' order.id %}" method="POST">
+    {% csrf_token %}
+
+    <a class="btn btn-warning" href="{% url 'store:dashboard'%}">Cancel</a>
+
+    <button class="btn btn-danger" type="submit" name="submit">Delete</button>
+
+</form>
+{% endblock content %}

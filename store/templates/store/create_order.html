@@ -1,0 +1,15 @@
+{%  extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{formset.management_form}}
+        {% for form in formset%}
+            {{form}}
+            <hr>
+        {% endfor %}
+        <button type="submit" name="submit">Create</button>
+    </form>
+
+{% endblock content %}
