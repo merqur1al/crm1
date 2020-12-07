@@ -8,7 +8,6 @@ Beaker==1.11.0
 blinker==1.4
 boto3==1.16.30
 botocore==1.19.30
-btrfsutil==5.9
 CacheControl==0.12.6
 ceph==1.0.0
 ceph-volume==1.0.0
