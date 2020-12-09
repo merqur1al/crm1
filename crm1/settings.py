@@ -25,7 +25,7 @@ SECRET_KEY = '03xgt0!8ad&pasbf$@++5c75r3j+8p1-@28#exjyka*+9-^hfu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['nukero-crm1.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['nukero-crm1.herokuapp.com']
 
 
 # Application definition
