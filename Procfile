@@ -1,1 +1,1 @@
-web: gunicorn crm1.wsgi --log-level  - --timeout 120
+web: gunicorn crm1.wsgi --log-level debug - --timeout 120
