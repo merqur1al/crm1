@@ -138,9 +138,9 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
-STATIC_ROOT = 'staticfiles'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATIC_URL = 'https://nukero-crm-bucket.s3.amazonaws.com/static/'
+STATIC_URL = 'https://nukero-crm-bucket.s3.amazonaws.com'
 
 #SMTP Cnfiguration
 
