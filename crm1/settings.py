@@ -12,8 +12,6 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 
-import django_heroku
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -28,7 +26,7 @@ SECRET_KEY = '03xgt0!8ad&pasbf$@++5c75r3j+8p1-@28#exjyka*+9-^hfu'
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['nukero-crm.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -83,12 +81,8 @@ WSGI_APPLICATION = 'crm1.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'nukerocrmdb',
-        'USER': 'postgres',
-        'PASSWORD':'solomider123321',
-        'HOST':'database-1.csfz0pyawoeu.eu-west-2.rds.amazonaws.com',
-        'PORT':'5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'dn.sqlite3'),
     }
 }
 
@@ -140,7 +134,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATIC_URL = 'https://nukero-crm-bucket.s3.amazonaws.com/'
+STATIC_URL = '/static/'
 
 #SMTP Cnfiguration
 
