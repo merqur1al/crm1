@@ -81,8 +81,12 @@ WSGI_APPLICATION = 'crm1.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'dn.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'nukerocrmdb',
+        'USER': 'postgres',
+        'PASSWORD': 'solomider123321',
+        'HOST': 'database-1.csfz0pyawoeu.eu-west-2.rds.amazonaws.com',
+        'PORT': '5432'
     }
 }
 
